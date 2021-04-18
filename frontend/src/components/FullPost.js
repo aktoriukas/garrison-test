@@ -16,6 +16,7 @@ import { ADD_POST,
 import CommentForm from './CommentForm'
 import Vote from './Vote'
 import Comment from './Comment'
+import NotFound from './NotFound'
 
 export default function FullPost( { match } ) {
 
@@ -27,6 +28,7 @@ export default function FullPost( { match } ) {
     const [title, setTitle] = useState(post.title)
     const [body, setBody] = useState(post.body)
     const [edit, setEdit] = useState(false)
+    const [notFound, setnotFound] = useState(false)
     
     useEffect(() => {
 
@@ -53,6 +55,10 @@ export default function FullPost( { match } ) {
 
     const getSinglePost = async () => {
         const post = await api_getSinglePost(id)
+        if(post === undefined){
+            setnotFound(true)
+            return
+        }
         dispatch({type: ADD_POST, post })
         setPost(post)
         setBody(post.body)
@@ -94,6 +100,9 @@ export default function FullPost( { match } ) {
 
     return (
 
+            notFound ? 
+            <NotFound />
+            :
             post.deleted === false ?
             
             <div className='post-container'>

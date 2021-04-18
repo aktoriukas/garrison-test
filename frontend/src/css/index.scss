@@ -76,6 +76,9 @@ input[type="submit"] {
     background: #e7f59e;
   }
 }
+.navigation {
+  margin-bottom: 2rem;
+}
 .comments,
 .score {
   line-height: 2;
@@ -119,4 +122,8 @@ input[type="submit"] {
       color: #92aa83;
     }
   }
+}
+.not-found {
+  margin-top: 20rem;
+  text-align: center;
 }

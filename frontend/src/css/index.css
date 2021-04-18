@@ -66,6 +66,9 @@ input[type="submit"] {
   input[type="submit"]:hover {
     background: #e7f59e; }
 
+.navigation {
+  margin-bottom: 2rem; }
+
 .comments,
 .score {
   line-height: 2;
@@ -104,5 +107,9 @@ input[type="submit"] {
     .post-container .comment h6 {
       font-size: 1.1rem;
       color: #92aa83; }
+
+.not-found {
+  margin-top: 20rem;
+  text-align: center; }
 
 /*# sourceMappingURL=index.css.map */

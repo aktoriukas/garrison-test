@@ -34,13 +34,11 @@ export default function PostsTeasers({ match}) {
 
     const getCateryPosts = async () => {
         const posts = await api_getPostByCategory(match.params.category)
-        console.log(posts)
         dispatch({type: RECEIVE_POSTS, posts: posts})
     }
 
     const getAllPosts = async () => {
         const posts = await api_getAllPosts()
-        console.log(posts)
         dispatch({type: RECEIVE_POSTS, posts: posts})
     }
     
@@ -49,7 +47,6 @@ export default function PostsTeasers({ match}) {
             <label>sort by:</label>
             <select className='dropdown' onChange={e => setSortBy(e.target.value)}>
                 <option>-</option>
-                <option value={'title'}>title</option>
                 <option value={'date'}>date</option>
                 <option value={'score'}>score</option>
             </select>
