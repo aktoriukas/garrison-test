@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
-import {BrowserRouter as Router, Switch , Route } from 'react-router-dom'
+import {BrowserRouter as Router, Switch , Route, Link } from 'react-router-dom'
 
 import PostsTeasers from './components/PostsTeasers'
 import FullPost from './components/FullPost'
 import PostForm from './components/PostForm'
+import Nav from './components/Nav'
+
 import { api_getCategories } from './API-calls'
 import { GET_CATEGORIES } from './actions'
 import { useDispatch } from 'react-redux' 
@@ -27,6 +29,8 @@ export default function App() {
       <div className="App">
 
         <PostForm path='/' />
+
+        <Nav />
 
         <Switch>
           

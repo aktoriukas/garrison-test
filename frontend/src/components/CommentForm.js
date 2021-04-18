@@ -20,6 +20,9 @@ export default function CommentForm({ parentId }) {
             parentId,
             body,
             author,
+            voteScore: 0,
+            deleted: false,
+            parentDeleted: false
         }
 
         dispatch({type: ADD_COMMENT, newComment})

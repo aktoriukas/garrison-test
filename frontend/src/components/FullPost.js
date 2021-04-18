@@ -117,6 +117,7 @@ export default function FullPost( { match } ) {
                     <>
                         <h3>{post.title}</h3>
                         <p>{post.body}</p>
+                        <h6>{post.author}</h6>
                     </>
                 }
     
@@ -140,7 +141,7 @@ export default function FullPost( { match } ) {
                     <CommentForm 
                         deleted={post.deleted} 
                         parentId={id}/>
-        
+
             </div>
             :
             ''

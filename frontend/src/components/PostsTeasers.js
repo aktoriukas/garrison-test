@@ -20,7 +20,7 @@ export default function PostsTeasers({ match}) {
         }else{
             getAllPosts()
         }
-    }, [])
+    }, [match])
 
     useEffect(() => {
         sortPosts()
@@ -40,6 +40,7 @@ export default function PostsTeasers({ match}) {
 
     const getAllPosts = async () => {
         const posts = await api_getAllPosts()
+        console.log(posts)
         dispatch({type: RECEIVE_POSTS, posts: posts})
     }
     

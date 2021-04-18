@@ -73,7 +73,10 @@ export default function Post({ post, id }) {
                             >save</button>
                         </div>
                         :
-                        <h3>{post.title}</h3>
+                        <>
+                            <h3>{post.title}</h3>
+                            <h6>{post.author}</h6>
+                        </>
                     }
         
                     <div className='options'>
